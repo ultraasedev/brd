@@ -1,0 +1,28 @@
+/*===> Begin select2 <===*/
+select.form-control:not([size]):not([multiple]) {
+	// height: calc(2.25rem + 2px);
+	height: 43px;
+}
+
+select.form-control {
+	-webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+}
+
+.selectWrapper {
+	position: relative;
+	display: block;
+
+	&::after {
+		content: '\25BE';
+		position: absolute;
+		z-index: 2;
+		right: 10px;
+		top: 50%;
+		margin-top: -14px;
+		pointer-events: none;
+	}
+}
+
+/*===> End select2 <===*/

@@ -1,0 +1,78 @@
+/*===> Begin book-list <===*/
+.book-list {
+	.book-line {
+		display: flex;
+		padding: 15px 0;
+		border-bottom: 1px solid rgba(61, 59, 66, 0.2);
+
+		.left, .right {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			p {
+				margin-bottom: 0;
+				color: var(--text_color);
+			}
+		}
+
+		.left {
+			position: relative;
+			padding-right: 11px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: -1px;
+				transform: translateY(-50%);
+				width: 2px;
+				height: 14px;
+				background: var(--text_color);
+			}
+		}
+
+		.right {
+			padding-left: 11px;
+
+			p {
+				color: var(--header_color);
+			}
+
+			a {
+				font-size: 16px;
+				font-weight: 700;
+				color: var(--header_color);
+
+				svg {
+					margin-right: 4px;
+					path {
+						fill: var(--main_color);
+					}
+				}
+
+				&:hover {
+					color: var(--main_color);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.hide-xs {
+			display: none;
+		}
+
+		.book-line {
+			.left {
+				width: 40%;
+			}
+
+			.right {
+				width: 60%;
+			}
+		}
+	}
+}
+/*===> End book-list <===*/

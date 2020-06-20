@@ -1,0 +1,61 @@
+/*===> Begin header <===*/
+.header-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	width: 100%;
+	padding: 0 60px;
+	background: var(--main_dark);
+
+	&.is-scroll {
+		position: fixed;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 0;
+
+		.header-right {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	@include breakpoint(leptop) {
+		padding: 0 15px;
+	}
+
+	@include breakpoint(small) {
+		height: 64px;
+		&.is-scroll {
+			height: 64px;
+			padding: 0 15px;
+		}
+
+		.logo {
+			.logo-text {
+				span {
+					&:first-child {
+						font-size: 28px;
+						line-height: 1em;
+					}
+
+					&:last-child {
+						padding-top: 2px;
+						padding-left: 2px;
+						font-size: 7px;
+						line-height: 1em;
+					}
+				}
+			}
+
+			img {
+				height: 30px;
+			}
+		}
+	}
+}
+/*===> End header <===*/

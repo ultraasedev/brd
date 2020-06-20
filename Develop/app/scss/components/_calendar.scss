@@ -1,0 +1,62 @@
+/*===> Begin calendar <===*/
+.calendar {
+	margin-bottom: 0;
+	max-width: 400px;
+	table {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+
+	thead {
+
+	}
+
+	th, td {
+		padding: 5px;
+		text-align: center;
+	}
+
+	tbody {
+		tr {
+			&:nth-child(odd) {
+				background: rgba(var(--header_color_rgb), 0.02);
+			}
+
+			&:nth-child(even) {
+				background: rgba(var(--header_color_rgb), 0.06);
+			}
+
+			td {
+				border: 2px solid  #fff;
+
+				&.selected {
+					background: var(--main_color);
+					color: #fff;
+				}
+
+				&:hover {
+					background: var(--main_color);
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	a {
+		font-family: var(--main_font);
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: var(--text_color);
+
+		&.now-data {
+			margin-bottom: 10px;
+		}
+
+		&.next-mounth {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+	}
+}
+/*===> End calendar <===*/

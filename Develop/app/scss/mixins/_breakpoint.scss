@@ -1,0 +1,37 @@
+@mixin breakpoint($point) {
+    @if $point == large {
+        @media (max-width: 1600px) {
+            @content;
+        }
+    }
+    @else if $point == leptop {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+    @else if $point == medium {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $point == small {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $point == extra-small {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $point == mobile-landscape {
+        @media (max-width: 768px) and (orientation: landscape) {
+            @content;
+        }
+    }
+    @else if $point == mobile {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+/*===> Begin footer <===*/
+footer {
+	background-size: cover;
+	background-position: center;
+	background-color: var(--main_dark);
+
+	.footer-bottom {
+		color: var(--text_gray);
+		p {
+			color: var(--text_gray);
+		}
+
+		a {
+			font-weight: normal;
+			color: var(--main_color);
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.footer-nav {
+			display: none;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.logo {
+
+			img {
+				width: 35px;
+			}
+
+			.logo-text {
+				span {
+					&:first-child {
+						font-size: 26px;
+						line-height: 26px;
+					}
+
+					&:last-child {
+						font-size: 6px;
+					}
+				}
+			}
+		}
+	}
+}
+/*===> End footer <===*/

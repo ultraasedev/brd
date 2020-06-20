@@ -1,0 +1,64 @@
+/*===> Begin social-list <===*/
+.social-list {
+	display: flex;
+
+	&.center {
+		justify-content: center;
+	}
+
+	&.dark {
+		li {
+			a {
+				&:hover {
+					svg path {
+						fill: var(--main_color)
+					}
+				}
+
+				svg path {
+					transition: all .3s;
+					fill: var(--header_color);
+				}
+			}
+		}
+	}
+
+	&.small {
+		li {
+			margin-right: 25px;
+		}
+
+		svg {
+			height: 13px;
+		}
+	}
+
+	li {
+		margin-bottom: 0;
+		margin-right: 40px;
+		padding-left: 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		a {
+
+			&:hover {
+				svg path {
+					fill: var(--main_color)
+				}
+			}
+
+			svg path {
+				transition: all .3s;
+				fill: #fff;
+			}
+		}
+	}
+}
+/*===> End social-list <===*/

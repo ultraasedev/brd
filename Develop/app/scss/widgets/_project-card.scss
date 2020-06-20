@@ -1,0 +1,35 @@
+/*===> Begin project-card <===*/
+.project-card {
+	display: block;
+	max-width: 376px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	.project-cart_logo {
+		margin-bottom: 30px;
+	}
+
+	.project-cart_name {
+		font-family: var(--header_font);
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: -0.03em;
+		color: var(--header_color);
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	@include breakpoint(extra-small) {
+		.project-cart_logo {
+			margin-bottom: 20px;
+		}
+
+		.project-cart_name {
+			font-size: 18px;
+		}
+	}
+}
+/*===> End project-card <===*/

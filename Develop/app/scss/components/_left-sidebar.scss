@@ -1,0 +1,7 @@
+/*===> Begin left-sidebar <===*/
+.left-sidebar {
+	@include breakpoint(small) {
+		flex-direction: column-reverse;
+	}
+}
+/*===> End left-sidebar <===*/

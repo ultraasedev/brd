@@ -1,0 +1,151 @@
+/*===> Begin client-filter <===*/
+.client-filter,
+.massonry-filter {
+	position: relative;
+
+	.client-filter-list,
+	.massonry-filter-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+
+		&.white {
+			.client-filter-list__item,
+			.massonry-filter-list__item {
+				&::before {
+					border-top: 1px solid #424048;
+					opacity: 1;
+				}
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	li {
+		padding-left: 0;
+		margin-bottom: 25px;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	.client-filter-list__item,
+	.massonry-filter-list__item {
+		position: relative;
+		margin-right: 90px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: calc(100% + 10px);
+			width: 70px;
+			-webkit-transform: translateY(-11px);
+			-moz-transform: translateY(-11px);
+			-ms-transform: translateY(-11px);
+			-o-transform: translateY(-11px);
+			transform: translateY(-11px);
+			border-top: 1px solid var(--header_color);
+			opacity: .2;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 25px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		a {
+			position: relative;
+			padding-bottom: 25px;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 19px;
+			line-height: 1em;
+			text-align: center;
+			color: var(--header_color);
+
+			&:hover {
+				color: var(--main_color);
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 0%;
+				height: 4px;
+				border-radius: 4px;
+				transition: all .3s;
+				@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+			}
+			
+			&.active {
+				&::before {
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		.client-filter-list__item,
+		.massonry-filter-list__item {
+			margin-right: 45px;
+
+			&::before {
+				left: calc(100% + 5px);
+				width: 35px;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.client-filter-list__item,
+		.massonry-filter-list__item {
+			margin-right: 30px;
+
+			&::before {
+				left: calc(100% + 5px);
+				width: 20px;
+			}
+
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.client-filter-list,
+		.massonry-filter-list {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.client-filter-list__item,
+		.massonry-filter-list__item {
+			margin-right: 0;
+			margin-bottom: 15px;
+
+			&::before {
+				display: none;
+			}
+
+			a {
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+/*===> End client-filter <===*/

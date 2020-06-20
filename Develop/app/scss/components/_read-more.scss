@@ -1,0 +1,22 @@
+/*===> Begin read-more <===*/
+.read-more {
+	margin-bottom: 0;
+	font-family: var(--header_font);
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--header_color);
+	border: none;
+	background: none;
+
+	svg {
+		margin-right: 8px;
+		path {
+			fill: var(--main_color);
+		}
+	}
+
+	&:hover {
+		color: var(--main_color);
+	}
+}
+/*===> End read-more <===*/

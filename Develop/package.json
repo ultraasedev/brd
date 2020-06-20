@@ -1,0 +1,28 @@
+{
+  "name": "gulp-template",
+  "version": "1.0.0",
+  "description": "simple gulp template",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viktor Kiselijov",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.1",
+    "gulp-watch": "^4.3.5",
+    "node-bourbon": "^4.2.8"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "node-bourbon": "^4.2.8",
+    "node-normalize-scss": "^1.4.0"
+  }
+}

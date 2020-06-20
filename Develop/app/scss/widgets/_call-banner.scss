@@ -1,0 +1,92 @@
+/*===> Begin call-banner <===*/
+.call-banner {
+	position: relative;
+	background-size: cover !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	text-align: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		transform: translate(0, 0);
+		width: 100%;
+		height: 4px;
+		@include linear-gradient(45deg, var(--main_color), var(--main_color_2));
+	}
+
+	&.white-section {
+		&::before {
+			display: none;
+		}
+
+		h2 {
+			color: var(--header_color);
+		}
+
+		p {
+			color: var(--header_color_2);
+		}
+	}
+
+	.open-popup-link {
+		min-width: 264px;
+		font-size: 16px;
+	}
+
+	h2 {
+		color: #fff;
+
+		svg {
+			margin-right: 10px;
+		}
+	}
+
+	p {
+		font-size: 19px;
+		color: var(--text_gray);
+	}
+
+	a {
+		font-family: var(--header_font);
+		font-style: normal;
+		font-weight: bold;
+		font-size: 36px;
+		text-align: center;
+		color: #fff;
+		cursor: pointer;
+
+		svg {
+			margin-right: 10px;
+			path {
+				fill: var(--main_color);
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		a {
+			font-size: 30px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		a {
+			font-size: 24px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		p {
+			font-size: 17px;
+		}
+
+		a {
+			font-size: 22px;
+		}
+	}
+}
+/*===> End call-banner <===*/

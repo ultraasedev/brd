@@ -1,0 +1,73 @@
+//== Bootstrap resolutions
+$screen-lm-min: 0;
+$screen-xs-min: 1px;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1230px;
+
+@mixin indent-responsive($preffix, $rules, $medias, $offsets) {
+
+	@if ($preffix != '' and $preffix != null) {
+		$preffix: #{$preffix}-;
+	}
+
+	@each $resolution, $alias in $medias {
+		@if ($resolution == 0) {
+			@each $offset in $offsets {
+				.#{$preffix}#{strip-unit($offset)} {
+					@each $rule in $rules {
+						#{$rule}: $offset !important;
+					}
+				}
+			}
+		} @else {
+			@media (min-width: $resolution) {
+				@each $offset in $offsets {
+					.#{$preffix}#{$alias}-#{strip-unit($offset)} {
+						@each $rule in $rules {
+							#{$rule}: $offset !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+$medias: ($screen-lm-min : lm, $screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl);
+// $medias-no: (0: null);
+
+$paddings: (0, 5px, 8px, 10px, 15px, 18px, 20px, 25px, 30px, 31px, 32px, 33px, 34px, 35px, 36px, 37px, 38px, 39px, 40px, 45px, 50px, 60px, 65px, 70px, 80px, 90px, 95px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 175px, 180px, 190px, 200px, 210px, 220px, 240px, 280px);
+$paddings-rl: (0, 5px, 8px, 10px, 15px, 18px, 20px, 25px, 30px, 31px, 32px, 33px, 34px, 35px, 36px, 37px, 38px, 39px, 40px, 45px, 50px, 60px, 65px, 70px, 90px, 95px);
+
+$margins: (-50px, -30px, 0, 8px, 10px, 15px, 18px, 20px, 25px, 30px, 31px, 32px, 33px, 34px, 35px, 36px, 37px, 38px, 39px, 40px, 45px, 50px, 60px, 65px, 70px, 80px, 90px, 95px, 100px, 110px, 120px, 130px, 140px, 150px, 160px, 170px, 175px, 180px, 190px, 200px, 210px, 250px, 280px);
+
+
+// Elements
+// -------------------------
+
+h3 + h1 {
+	margin-top: 10px;
+}
+
+.letter-spacing-0 {
+	letter-spacing: 0;
+}
+
+// Responsive
+// -------------------------
+
+
+
+@include indent-responsive(pt, padding-top, $medias, $paddings);
+@include indent-responsive(pb, padding-bottom, $medias, $paddings);
+
+@include indent-responsive(pr, padding-right, $medias, $paddings-rl);
+@include indent-responsive(pl, padding-left, $medias, $paddings-rl);
+
+@include indent-responsive(mt, margin-top, $medias, $margins);
+@include indent-responsive(mb, margin-bottom, $medias, $margins);
+
+// @include indent-responsive(ml, margin-left, $medias-no, $margins);
+// @include indent-responsive(mr, margin-right, $medias-no, $margins);

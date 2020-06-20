@@ -1,0 +1,28 @@
+/*===> Begin noUi <===*/
+.noUi-target {
+	height: 2px;
+	margin-bottom: 25px;
+	border: none;
+	background: rgba(136, 136, 136, 0.44);
+	box-shadow: none;
+}
+
+.noUi-connect {
+	background: var(--main_color);
+}
+
+.noUi-horizontal .noUi-handle {
+	top: -4px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background: var(--main_color);
+	overflow: hidden;
+	box-shadow: none;
+}
+
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+	right: -10px;
+}
+/*===> End noUi <===*/

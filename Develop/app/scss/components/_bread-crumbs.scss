@@ -1,0 +1,42 @@
+/*===> Begin bread-crumbs <===*/
+.bread-crumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	li {
+		padding-left: 30px;
+		margin-bottom: 0;
+
+		&:first-child {
+			padding-left: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&::after {
+			content: '-';
+			left: 12px;
+			top: 13px;
+			background: none;
+			font-size: 17px;
+			line-height: 1px;
+			width: auto;
+			color: var(--text_gray);
+		}
+
+		a,p {
+			color: #fff;
+		}
+
+		a {
+			&:hover {
+				color: var(--main_color);
+			}
+		}
+	}
+}
+/*===> End bread-crumbs <===*/

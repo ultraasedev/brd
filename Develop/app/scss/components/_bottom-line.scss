@@ -1,0 +1,27 @@
+.bottom-line {
+	position: relative;
+	padding-right: 45px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 12px;
+		left: auto;
+		display: inline-block;
+		transform: translateX(5px);
+		min-width: 43px;
+		height: 4px;
+		border-radius: 6px;
+		@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+	}
+
+	@include breakpoint(medium) {
+		padding-right: 30px;
+
+		&::after {
+			bottom: 9px;
+			width: 30px;
+			min-width: 30px;
+		}
+	}
+}

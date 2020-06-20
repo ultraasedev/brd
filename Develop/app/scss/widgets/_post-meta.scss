@@ -1,0 +1,92 @@
+/*===> Begin post-teaser <===*/
+.post-meta {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: -25px;
+	margin-bottom: 20px;
+
+	time {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 90px;
+		height: 90px;
+		margin-right: 20px;
+		border-radius: 50%;
+		background: var(--main_color);
+		font-family: var(--main_font);
+		font-size: 15px;
+		font-weight: 700;
+		text-align: center;
+		color: #fff;
+
+		span {
+			font-family: var(--header_font);
+			font-size: 36px;
+			line-height: 1em;
+		}
+
+		br {
+			display: none;
+			height: 0;
+		}
+	}
+
+	p {
+		margin-top: 10px;
+		margin-bottom: 0;
+		margin-right: 15px;
+		font-family: var(--main_font);
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: var(--text_color);
+
+		svg {
+			margin-right: 5px;
+		}
+	}
+
+	a {
+		font-family: var(--main_font);
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: var(--text_color);
+
+		&:hover {
+			color: var(--main_color);
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		flex-direction: column;
+		margin-top: -10px;
+
+		time {
+			flex-direction: column;
+			width: 60px;
+			height: 60px;
+			margin-right: 0;
+			font-size: 24px;
+
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		time {
+			font-size: 12px;
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+}
+/*===> End post-teaser <===*/

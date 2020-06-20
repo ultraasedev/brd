@@ -1,0 +1,130 @@
+/*===> Begin datetimepicker <===*/
+.bootstrap-datetimepicker-widget, .datepicker   {
+	.list-unstyled {
+		margin-bottom: 0;
+		li {
+			padding-left: 0;
+
+			&::after {
+				display: none;
+			}
+
+			&:nth-child(1) {
+				margin-bottom: 0;
+			}
+
+			&:nth-child(2) {
+				// display: none;
+			}
+		}
+	}
+
+	thead {
+		tr {
+			display: flex;
+			border-radius: 0px;
+
+			th {
+				flex-grow: 1;
+				border-radius: 0;
+
+				&:hover {
+					background: var(--main_color_2) !important;
+				}
+			}
+		}
+	}
+
+	table {
+		tr {
+			display: table;
+			width: 100%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+
+			&:nth-child(2) {
+				padding-left: 0;
+				padding-right: 0;
+
+				 th {
+					margin: 2px;
+					text-align: center;
+				}
+			}
+		}
+
+		td {
+			border-radius: 0;
+			padding: 5px 2px;
+			height: auto;
+		}
+	}
+
+	table,
+	.datepicker-months,
+	.datepicker-years,
+	.datepicker-decades {
+		tbody tr {
+			background: #fff;
+			padding-left: 0;
+			padding-right: 0;
+
+			span, td {
+				text-align: center;
+
+				&.active {
+					background: var(--main_color);
+				}
+			}
+
+			td {
+				text-align: left;
+			}
+
+			span {
+				// background: $table_color;
+				&:not([class]) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.datepicker-decades {
+		table tbody td:first-child * {
+			font-size: 16px;
+			text-align: left;
+		}
+	}
+
+	.datepicker-days {
+		tbody tr {
+			margin-bottom: 0;
+			padding-top: 0;
+			padding-left: 0;
+			padding-bottom: 2px;
+			padding-right: 0;
+			background: #fff;
+
+			 td {
+				margin: 2px;
+				// min-width: 0 !important;
+				// background: $table_color;
+				text-align: center;
+
+				&.active {
+					background: var(--main_color);
+				}
+			}
+		}
+	}
+} 
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+	@include breakpoint(extra-small) {
+		width: 100%;
+		max-width: 260px;
+	}
+}
+
+/*===> End datetimepicker <===*/

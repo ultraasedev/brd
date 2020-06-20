@@ -1,0 +1,859 @@
+.awp-home-player,
+.awp-project-player {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+
+  svg {
+    cursor: pointer;
+
+    &:hover {
+      path {
+        fill: var(--main_color);
+      }
+    }
+
+    path {
+      fill: #fff;
+      transition: all .3s;
+    }
+  }
+
+  .icon-pause  {
+    display: none;
+  }
+}
+.awp-home-player .awp-player-holder {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.awp-player-holder .icon-play.fa-pause, 
+.awp-player-holder .icon-pause, 
+.awp-player-holder .icon-pause.fa-play {
+  display: none;
+}
+.awp-player-holder .icon-pause.fa-pause {
+  display: block;
+}
+
+.awp-contr-btn.is-play {
+  .icon-play {
+    display: none;
+  }
+
+  .icon-pause {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .awp-home-player .awp-player-holder {
+    height: 35px;
+  }
+  .awp-home-player .awp-player-holder .awp-waveform > wave {
+    height: 25px !important;
+  }
+}
+.awp-home-player .awp-player-holder>*, .awp-project-player .awp-player-holder>* {
+  margin: 0 5px;
+}
+.awp-home-player .awp-icon-color {
+  color: #fff;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.awp-home-player .awp-icon-color:hover {
+  color: var(--main_color);
+}
+.awp-home-player .awp-icon-rollover-color {
+  color: var(--main_color) !important;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.awp-home-player .awp-contr-btn-i, .awp-project-player .awp-contr-btn-i {
+  font-size: 32px;
+  line-height: 55px;
+}
+@media (max-width: 767px) {
+  .awp-home-player .awp-contr-btn-i, .awp-project-player .awp-contr-btn-i {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.awp-home-player .awp-contr-btn-vol-i {
+  font-size: 18px !important;
+}
+.awp-home-player .awp-playback-toggle {
+  width: 34px;
+}
+.awp-home-player .awp-prev-toggle {
+  width: 25px;
+}
+.awp-home-player .awp-next-toggle {
+  width: 25px;
+  text-align: right;
+}
+.awp-home-player .awp-media-time {
+  color: #fff;
+  line-height: 55px;
+  font-size: 14px;
+  margin-right: 35px;
+}
+.awp-home-player .awp-media-time span {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+.awp-home-player .awp-waveform-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 1px;
+}
+.awp-home-player .awp-waveform-preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0;
+}
+.awp-home-player .awp-info {
+  position: relative;
+  top: 2px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-left: 25px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+.awp-home-player .awp-playlist-holder {
+  display: none;
+}
+.awp-home-player .awp-volume-wrapper {
+  margin: 0 10px;
+}
+@media (max-width: 1024px) {
+  .awp-home-player .awp-volume-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .awp-home-player .awp-info,
+  .awp-home-player .awp-media-time {
+    display: none;
+  }
+}
+.icon-play-circle.fa-play:before {
+  content: "\e927";
+}
+.icon-play-circle.fa-pause:before {
+  content: "\e902";
+}
+.icon-music-equalizer-1.fa-volume-up:before {
+  content: "\e926";
+}
+.awp-volume-wrapper {
+  width: 185px;
+  height: 25px;
+  position: relative;
+}
+.awp-player-volume {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.awp-player-volume i {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  font-size: 18px!important;
+  line-height: 25px!important;
+  color: #fff !important;
+  text-align: center;
+  display: inline-block;
+}
+.awp-volume-seekbar {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 150px;
+  height: 9px;
+  cursor: pointer;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+.awp-volume-bg {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: #2B2A2E;
+  border-radius: 10px;
+}
+.awp-volume-level {
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  width: 0px;
+  height: 3px;
+  background: var(--main_color);
+  background: linear-gradient(270deg, var(--main_color) 0%, var(--main_color_2) 100%);
+}
+.awp-volume-level:after {
+  content: '';
+  position: absolute;
+  right: -7px;
+  top: -2.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 7.5px;
+  z-index: 1;
+  background: var(--main_color);
+}
+.awp-hidden {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.awp-visible {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+.awp-preloader {
+  position: fixed;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.awp-preloader span {
+  display: block;
+  bottom: 0px;
+  width: 9px;
+  height: 5px;
+  background: #baacf1;
+  position: absolute;
+  -webkit-animation: awp_preloader 1.5s infinite ease-in-out;
+          animation: awp_preloader 1.5s infinite ease-in-out;
+}
+.awp-preloader span:nth-child(2) {
+  left: 11px;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+.awp-preloader span:nth-child(3) {
+  left: 22px;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+.awp-preloader span:nth-child(4) {
+  left: 33px;
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+.awp-preloader span:nth-child(5) {
+  left: 44px;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+@-webkit-keyframes awp_preloader {
+  0% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    height: 30px;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  50% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes awp_preloader {
+  0% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  25% {
+    height: 30px;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  50% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    height: 5px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*--------   3.2 Popup Player     --------*/
+body.mfp-is-open .awp-player-popup {
+  display: block;
+}
+.awp-player-popup {
+  display: none;
+  position: relative;
+  background: #000;
+  width: 90%;
+  max-width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 75px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 75px rgba(0, 0, 0, 0.2);
+}
+.awp-player-popup .mfp-close {
+  color: #fff !important;
+}
+.awp-player-popup .awp-player-thumb {
+  overflow: hidden;
+  position: relative;
+}
+.awp-player-popup .awp-player-thumb:after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/bg-hover.png) repeat rgba(0, 0, 0, 0.7);
+  opacity: 0.65;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.awp-player-popup .awp-player-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.awp-player-popup .awp-player-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -ms-touch-action: none;
+      touch-action: none;
+  overflow: hidden;
+}
+.awp-player-popup .awp-icon-color {
+  color: #eee !important;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.awp-player-popup .awp-icon-rollover-color {
+  color: #fff !important;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.awp-player-popup .awp-contr-btn-i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 26px !important;
+  line-height: 35px !important;
+}
+.awp-player-popup .awp-info {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 200px;
+}
+.awp-player-popup .awp-player-title {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0!important;
+}
+.awp-player-popup .awp-player-artist {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--main_color);
+  margin: 0!important;
+}
+.awp-player-popup .awp-player-controls {
+  position: absolute;
+  height: 50px;
+  bottom: 85px;
+  left: 20px;
+  right: 20px;
+}
+.awp-player-popup .awp-prev-toggle {
+  position: relative;
+  left: 0px;
+  top: 7px;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 10px;
+}
+.awp-player-popup .awp-playback-toggle {
+  position: relative;
+  top: 0px;
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 5px;
+}
+.awp-player-popup .awp-playback-toggle i {
+  width: 60px;
+  height: 60px;
+  line-height: 50px!important;
+  font-size: 50px!important;
+}
+.awp-player-popup .awp-next-toggle {
+  position: relative;
+  left: 0px;
+  top: 7px;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 10px;
+}
+.awp-player-popup .awp-prev-toggle i,
+.awp-player-popup .awp-next-toggle i {
+  font-size: 38px!important;
+}
+.awp-player-popup .awp-waveform-wrap {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: 50px;
+  left: 20px;
+  bottom: 20px;
+}
+.awp-player-popup .awp-waveform-preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0;
+}
+.awp-player-popup .awp-waveform-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.awp-player-popup .awp-waveform-img-load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.awp-player-popup .awp-waveform-img-progress-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-right: 3px solid #0000ff;
+}
+.awp-player-popup .awp-waveform-img-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.awp-player-popup .awp-waveform-img-load img,
+.awp-player-popup .awp-waveform-img-progress img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.awp-player-popup #awp-playlist-list {
+  display: none;
+}
+.awp-player-popup .awp-volume-wrapper {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+@media (max-width: 767px) {
+  .awp-player-popup .awp-volume-wrapper {
+    display: none;
+  }
+}
+/*--------   3.3 Playlist Player  --------*/
+.awp-project-player {
+  position: relative;
+  margin-bottom: 30px;
+  /* scroll */
+}
+.awp-project-player .awp-player-row-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.awp-project-player .awp-player-thumb-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+.awp-project-player .awp-player-thumb {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.awp-project-player .awp-player-thumb img {
+  display: block;
+  position: absolute;
+  max-width: none;
+  height: 100%;
+  width: auto!important;
+  min-width: 100px;
+}
+.awp-project-player .awp-player-holder {
+  position: relative;
+  height: 55px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+.awp-project-player .awp-playback-toggle,
+.awp-project-player .awp-contr-btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+.awp-project-player .awp-playback-toggle i {
+  padding: 0 12px;
+  font-size: 54px!important;
+  line-height: 55px!important;
+  color: #13161d !important;
+  text-align: center;
+  display: inline-block;
+}
+.awp-project-player .awp-info {
+  position: relative;
+  pointer-events: none;
+}
+.awp-project-player .awp-player-artist {
+  font-size: 20px;
+  line-height: 26px;
+  color: #70b615;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1679px) {
+  .awp-project-player .awp-player-artist {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.awp-project-player .awp-player-title {
+  font-size: 26px;
+  line-height: 30px;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 0;
+}
+@media (max-width: 1679px) {
+  .awp-project-player .awp-player-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+.awp-project-player .awp-waveform-wrap {
+  position: relative;
+  height: 55px;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 15px;
+}
+.awp-project-player .awp-waveform-with-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+@media (max-width: 767px) {
+  .awp-project-player .awp-player-holder {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+  .awp-project-player .awp-waveform-with-time {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    min-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.awp-project-player .awp-waveform-preloader {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0;
+}
+.awp-project-player .awp-waveform-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.awp-project-player .awp-waveform-img-load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.awp-project-player .awp-waveform-img-progress-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-right: 3px solid #0000ff;
+}
+.awp-project-player .awp-waveform-img-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.awp-project-player .awp-waveform-img-load img,
+.awp-project-player .awp-waveform-img-progress img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.awp-project-player .awp-player-controls {
+  width: 185px;
+  height: 55px;
+}
+.awp-project-player .awp-icon-color {
+  color: #13161d;
+}
+.awp-project-player .awp-icon-color:hover {
+  color: #70b615;
+}
+.awp-project-player .awp-contr-btn-i {
+  display: inline-block;
+  font-size: 32px!important;
+  line-height: 55px!important;
+}
+.awp-project-player .awp-media-time-current,
+.awp-project-player .awp-media-time-total {
+  position: relative;
+  pointer-events: none;
+  font-size: 13px;
+  line-height: 55px;
+}
+.awp-project-player #awp-playlist-list {
+  display: none;
+}
+.awp-project-player .awp-playlist-holder {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+.awp-project-player .awp-playlist-inner {
+  min-height: 200px;
+  max-height: 500px;
+}
+.awp-project-player .awp-playlist-item {
+  position: relative;
+  overflow: hidden;
+  line-height: 30px;
+  padding: 0;
+  border-top: 1px solid #e3e3e3;
+}
+.awp-project-player .awp-playlist-item > a {
+  border: 0;
+  padding-top: 10px;
+}
+.awp-project-player .awp-playlist-item:last-child {
+  margin-bottom: 0px!important;
+}
+.awp-project-player .awp-playlist-non-selected {
+  float: left;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.awp-project-player .awp-playlist-selected {
+  float: left;
+  color: #70b615 !important;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.awp-project-player .awp-playlist-title {
+  font-size: 18px;
+  color: inherit;
+}
+@media (max-width: 1679px) {
+  .awp-project-player .awp-playlist-title {
+    font-size: 16px;
+  }
+}
+.awp-project-player .awp-download,
+.awp-project-player .awp-link {
+  float: right;
+  padding-top: 0 !important;
+  color: #13161d !important;
+  font-size: 13px!important;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+.awp-project-player .awp-download i,
+.awp-project-player .awp-link i {
+  line-height: 30px;
+  color: inherit;
+  font-style: normal;
+}
+.awp-project-player .awp-download i.fa-download:before {
+  display: block;
+  font-family: 'recording';
+  content: '\e939';
+  font-size: 18px;
+  line-height: 50px;
+  position: relative;
+}
+.awp-project-player .awp-download:hover,
+.awp-project-player .awp-link:hover {
+  color: #70b615 !important;
+  text-decoration: none;
+}
+.awp-project-player .awp-bottom-bar {
+  position: relative;
+  top: 0px;
+  clear: both;
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #232323;
+  margin-top: 30px;
+}
+.awp-project-player .awp-download-confirm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 1px solid #555;
+  opacity: 0;
+  z-index: 1000;
+  display: none;
+}
+.awp-project-player .awp-download-confirm p {
+  padding: 10px 5px !important;
+  font-size: 14px;
+  color: #fff;
+  background: #333;
+  text-align: center;
+}
+.awp-project-player .awp-preloader {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -15px;
+  background: #111111 url('../img/ajax-loader.gif') no-repeat center center;
+}
+.awp-project-player .awp-hidden {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.awp-project-player .awp-visible {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+.awp-project-player .awp-playlist-inner .mCSB_inside > .mCSB_container {
+  margin-right: 30px;
+}
+.awp-project-player .mCS-records.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #d7d7d7;
+  width: 2px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#awp-home-playlist {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}

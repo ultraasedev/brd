@@ -1,0 +1,26 @@
+$resolutions: (1920px, 1600px, 1440px, 1199px, 991px, 767px, 480px);
+
+$levels: ( 
+	lev1: (40px, 40px, 40px, 40px, 30px, 30px, 30px),
+	lev2: (35px, 35px, 35px, 35px, 35px, 30px, 20px),
+	lev3: (30px, 30px, 30px, 30px, 30px, 25px, 20px),
+	lev4: (20px, 20px, 20px, 20px, 20px, 15px, 15px),
+	lev5: (15px, 15px, 15px, 15px, 15px, 15px, 10px),
+    lev6: (10px, 10px, 10px, 10px, 10px, 10px, 5px),
+    lev-l: (70px, 70px, 70px, 70px, 60px, 50px, 40px),
+	lev-xl: (80px, 80px, 80px, 80px, 80px, 70px, 60px),
+);
+
+@mixin indent($method, $side, $resolution, $indents) {
+    @if ((length($resolution) > 0 and length($indents) > 0) and (length($resolution)==length($indents))) {
+        @for $i from 1 through length($resolution) {
+            @media (max-width: nth($resolution, $i)) {
+                #{$method}-#{$side}: nth($indents, $i);
+            }
+        }
+    }
+}
+
+/* .test {
+    @include indent('margin', 'top', $resolutions, map-get($levels, lev1));
+} */

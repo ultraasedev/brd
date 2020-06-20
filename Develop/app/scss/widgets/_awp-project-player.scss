@@ -1,0 +1,144 @@
+/*===> Begin awp-project-player <===*/
+.awp-project-player {
+	.awp-player-title {
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 22px;
+		letter-spacing: -0.03em;
+		color: #FFFFFF;
+	}
+
+	.awp-player-artist {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		line-height: 20px;
+		/* identical to box height */
+		display: flex;
+		align-items: center;
+
+		color: #FF6600;
+	}
+
+	.awp-download {
+		display: none;
+	}
+
+	.awp-player-holder {
+		align-items: center;
+	}
+
+	@include breakpoint(extra-small) {
+		.awp-playlist-title {
+			font-size: 14px;
+		}
+
+		.awp-player-title {
+			font-size: 18px;
+		}
+
+		.awp-player-artist {
+			font-size: 14px;
+		}
+	}
+}
+
+.mCSB_scrollTools {
+	width: 9px;
+}
+
+.awp-project-player .awp-playlist-inner {
+	min-height: 255px;
+	max-height: 300px;
+}
+
+.mCustomScrollBox {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	max-width: 100%;
+	outline: none;
+	direction: ltr;
+}
+
+.mCSB_scrollTools {
+	position: absolute;
+	width: 9px;
+	height: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: auto;
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+	cursor: pointer;
+	width: 100%;
+	height: 30px;
+	z-index: 1;
+}
+
+.awp-project-player .mCS-records.mCSB_scrollTools .mCSB_draggerRail {
+	width: 9px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #C4C4C4;
+	opacity: 0.1;
+	border-radius: 10px;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+	height: 100%;
+}
+
+.mCS-records.mCSB_scrollTools .mCSB_draggerRail {}
+
+.mCS-records.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	margin-left: auto;
+	margin-right: auto;
+	background: linear-gradient(to bottom, #FF6600 0%, #7B16D9 100%);
+}
+
+.mCS-records.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	width: 5px;
+	border-radius: 10px;
+	height: 100%;
+}
+
+.awp-project-player .awp-playlist-item {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	border-top: none !important;
+}
+
+.awp-project-player .awp-playlist-item:last-child {
+	margin-bottom: 0px!important;
+	border: none;
+}
+
+.awp-project-player .awp-playlist-title {
+	font-size: 17px;
+	line-height: 39px;
+	color: #D3D3D5;
+}
+
+.awp-playlist-selected {
+	.awp-playlist-title {
+		font-weight: bold;
+		color: #fff;
+	}
+}
+/*===> End awp-project-player <===*/

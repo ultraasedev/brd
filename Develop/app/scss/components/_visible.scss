@@ -1,0 +1,13 @@
+/*===> Begin visible <===*/
+.visible-sm {
+	display: none !important;
+
+	&.hide {
+		display: none !important;
+	}
+
+	@include breakpoint(small) {
+		display: block !important;
+	}
+}
+/*===> End visible <===*/

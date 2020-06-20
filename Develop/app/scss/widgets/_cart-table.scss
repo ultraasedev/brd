@@ -1,0 +1,93 @@
+/*===> Begin cart-table <===*/
+.table-wrap {
+	overflow: auto;
+}
+
+.cart-table {
+	min-width: 700px;
+	border-top: 1px solid rgba(68,37,37,0.15);
+	
+	tr {
+		&:first-child {
+			td {
+				font-family: var(--main_font);
+				font-style: normal;
+				font-weight: bold;
+				font-size: 19px;
+				color: var(--header_color);
+			}
+		}
+	}
+
+	.table-prod {
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-right: 15px;
+		}
+
+		p {
+			font-family: var(--main_font);
+			font-style: normal;
+			font-weight: normal;
+			font-size: 17px;
+			color: var(--header_color);
+		}
+	}
+
+	form {
+		input {
+			max-width: 46px;
+			text-align: center;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.table-control {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	.control-left,
+	.control-right {
+		margin-bottom: 15px;
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+
+		input {
+			flex-shrink: 2;
+			margin-bottom: 0;
+			max-width: 200px;
+			margin-right: 15px;
+		}
+
+		button {
+			flex-shrink: 0;
+		}
+	}
+}
+
+.ship-form {
+	.form-control {
+		margin-bottom: 15px;
+	}
+
+	input {
+		margin-bottom: 15px;
+	}
+
+	button {
+		margin-top: 10px;
+	}
+}
+
+.total-table {
+	border-top: 1px solid rgba(68,37,37,0.15);
+}
+/*===> End cart-table <===*/

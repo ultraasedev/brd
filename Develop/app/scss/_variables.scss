@@ -1,0 +1,74 @@
+/*COLORS*/
+
+
+
+
+/*------------------------------------------------------------------
+# [Color codes]
+
+
+# */
+
+/*FONTS*/
+$main_font: 'Roboto', sans-serif;
+$header_font: 'Poppins', sans-serif;
+$font_awsome: "Font Awesome 5 Free";
+
+/*------------------------------------------------------------------
+# [Fonts]
+
+main Font    : Roboto
+header Font    : Poppins
+
+# */
+
+:root {
+	--main_font: 'Roboto', sans-serif;
+	--header_font: 'Poppins', sans-serif;
+	--font_awsome: "Font Awesome 5 Free";
+	
+	--main_color: #FF6600;
+	--main_color_rgb: 255,102,0;
+
+	--main_color_2: #7B16D9;
+	--main_color_2_rgb: 123,22,217;
+
+	--main_dark: #1C1B1F;
+	--main_dark_rgb: 28,27,31;
+
+	--main_gray: #343337;
+	--main_gray_rgb: 52,51,55;
+
+	--no_active: #cfcecd;
+	--no_active_rgb: 207,206,205;
+
+	--error_color: #9f0108;
+	--error_color_rgb: 159,1,8;
+
+	--header_color: #3D3B42;
+	--header_color_rgb: 61,59,66;
+
+	--header_color_2: #706E72;
+	--header_color_2_rgb: 112,110,114;
+
+	--text_color: #888888;
+	--text_color_rgb: 136,136,136;
+
+	--text_gray: #D3D3D5;
+	--text_gray_rgb: 211,211,213;
+
+	--table_border: #e3dfdf;
+	--table_border_rgb: 227,223,223;
+
+	--table_light_gray: #F4F4F4;
+	--table_light_gray_rgb: 244,244,244;
+
+	--icon_bg: #D5CFE3;
+	--icon_bg_rgb: 213,207,227;
+
+	--slick_dots_bg: #C4C4C4;
+	--slick_dots_bg_rgb: 196,196,196;
+
+	--slick_arrow_color: #3D3B42;
+	--slick_arrow_color_rgb: 61,59,66;
+}

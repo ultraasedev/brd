@@ -1,0 +1,33 @@
+/*===> Begin footer-nav <===*/
+.footer-nav {
+	max-width: 1030px;
+	margin-left: auto;
+	margin-right: auto;
+
+	ul {
+		display: flex;
+		justify-content: space-between;
+
+		li {
+			margin-bottom: 0;
+			padding-left: 0;
+
+			&::after {
+				display: none;
+			}
+
+			a {
+				font-family: var(--header_font);
+				font-size: 18px;
+				font-weight: bold;
+				text-transform: capitalize;
+				color: #fff;
+
+				&:hover {
+					color: var(--main_color);
+				}
+			}
+		}
+	}
+}
+/*===> End footer-nav <===*/

@@ -1,0 +1,85 @@
+/*===> Begin tab-blocks <===*/
+.tab-blocks {
+	position: relative;
+	overflow: hidden;
+	.tab-blocks__item {
+		height: 0;
+		z-index: 0;
+		display: flex;
+		background: var(--main_gray);
+		transition: opacity .5s;
+		opacity: 0;
+		overflow: hidden;
+		transform: scale(0);
+
+		&.active {
+			height: auto;
+			z-index: 2;
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		.tab-text {
+			width: 50%;
+			max-width: 595px;
+			margin-right: auto;
+			padding: 90px 15px 90px 80px;
+
+			h4 {
+				color: #fff;
+			}
+
+			p {
+				color: var(--text_gray);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.tab-slider {
+		width: 50%;
+	}
+
+	@include breakpoint(medium) {
+		.tab-blocks__item {
+			.tab-text {
+				padding: 60px 15px 60px 40px;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.tab-blocks__item {
+			.tab-text {
+				padding: 25px 15px 25px 15px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.tab-blocks__item {
+			flex-direction: column;
+			.tab-text {
+				margin-right: 0;
+				max-width: none;
+				width: 100%;
+				padding: 25px 15px 25px 15px;
+			}
+		}
+
+		.tab-slider {
+			width: 100%;
+			height: 400px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.tab-slider {
+			height: 300px;
+		}
+	}
+}
+/*===> End tab-blocks <===*/

@@ -1,0 +1,64 @@
+/*===> Begin instagram-grid <===*/
+.instagram-grid-full {
+	display: flex;
+	flex-wrap: wrap;
+
+	a {
+		position: relative;
+		width: 12.5%;
+		transition: all .3s;
+
+		&:hover {
+			opacity: .6;
+		}
+
+		.icn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 10px;
+			background: rgba(var(--main_dark_rgb), .9);
+		}
+	}
+
+	@include breakpoint(medium) {
+		a {
+			// width: 16.666%;
+			width: 25%;
+
+			&:nth-child(n+9) {
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		a {
+			width: 33.33%;
+
+			&:nth-child(n+7) {
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		a {
+			width: 50%;
+
+			&:nth-child(n+5) {
+				display: none;
+			}
+		}
+	}
+}
+
+.show-insta {
+	position: relative;
+	z-index: 10;
+
+	.hide {
+		display: none;
+	}
+}
+/*===> End instagram-grid <===*/

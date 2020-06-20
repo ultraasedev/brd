@@ -1,0 +1,275 @@
+/*===> Begin main-nav <===*/
+.main-nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	.menu {
+		display: flex;
+		align-items: center;
+		> li{
+			margin-right: 45px;
+		}
+
+		li {
+			margin-bottom: 0;
+			padding-left: 0;
+
+			&::after {
+				display: none;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 0%;
+				height: 4px;
+				border-radius: 4px;
+				transition: all .3s;
+				@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				>.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					top: 100%;
+					transform: translateY(-4px);
+				}
+			}
+
+			&:nth-child(n+4) {
+				.sub-menu {
+					left: auto;
+					right: 0%;
+
+					.sub-menu {
+						left: auto;
+						right: 100%;
+					}
+				}
+			}
+
+			&.active {
+				>a {
+					text-transform: uppercase;
+					color: var(--main_color);
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 18px 0;
+				font-family: var(--header_font);
+				font-size: 14px;
+				font-weight: bold;
+				color: #fff;
+
+				svg {
+					display: none;
+					width: 10px;
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 1400px){
+		.menu{
+			> li{
+				margin-right: 30px;
+			}
+		}
+	}
+
+	.sub-menu {
+		position: absolute;
+		z-index: 10;
+		top: 110%;
+		left: 0;
+		min-width: 185px;
+		border-radius: 12px;
+		background: #fff;
+		transition: all .3s;
+		opacity: 0;
+		visibility: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -10;
+			bottom: -3px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			@include linear-gradient(45deg, var(--main_color), var(--main_color_2));
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -8;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+			background: #fff;
+		}
+
+		li {
+			display: block;
+			width: 100%;
+			z-index: 10;
+			margin-right: 0;
+			margin-left: 0;
+			padding-right: 0;
+			padding-left: 0;
+
+			&:first-child {
+				padding-top: 10px;
+				border-radius: 12px 12px 0 0;
+			}
+
+			&:last-child {
+				padding-bottom: 10px;
+				border-radius: 0 0 12px 12px;
+			}
+
+			&:hover {
+				>.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					top: 0%;
+					transform: translateY(0);
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 8px 22px;
+				text-transform: uppercase;
+				color: var(--header_color);
+
+				&:hover {
+					color: var(--main_color);
+				}
+
+				/* svg {
+					width: 10px;
+					path {
+						fill: var(--header_color);
+					}
+				} */
+			}
+		}
+
+		.sub-menu {
+			left: 100%;
+			top: 30px;
+		}
+	}
+
+	@include breakpoint(medium) {
+		position: fixed;
+		top: 63px;
+		right: 0;
+		width: 100%;
+		height: calc(100vh - 63px);
+		justify-content: flex-start;
+		align-items: flex-start;
+		background: rgba(var(--main_dark_rgb), .5);
+		opacity: 0;
+		transition: all .3s;
+		visibility: hidden;
+
+		&.show-menu {
+			visibility: visible;
+			opacity: 1;
+			.menu {
+				transform: translateX(0);
+			}
+		}
+
+		.menu {
+			width: 100%;
+			max-width: 320px;
+			margin-left: auto;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			height: 100%;
+			overflow: auto;
+			padding: 20px;
+			background: rgba(var(--main_dark_rgb), 1);
+			transform: translateX(100%);
+			transition: transform .3s;
+
+			li {
+				display: block;
+				width: 100%;
+				margin-right: 0;
+
+				a {
+
+					&.active {
+						svg {
+							transform: rotate(180deg);
+						}
+					}
+
+					svg {
+						display: block;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+
+		.sub-menu {
+			position: static;
+			display: none;
+			visibility: visible;
+			opacity: 1;
+			transition: all 0s;
+			background: none;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+
+			li {
+				a {
+					padding-right: 0;
+					color: #fff;
+				}
+
+				ul {
+					padding-left: 15px;
+					li {
+						&:first-child {
+							padding-top: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.menu-gradient {
+			display: none;
+		}
+	}
+}
+/*===> End main-nav <===*/

@@ -1,0 +1,116 @@
+/*===> Begin tile-price-wrap <===*/
+.tile-price-wrap {
+	margin-top: -14px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.tile-price-card {
+	position: relative;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-top: 14px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+	.text {
+		position: absolute;
+		bottom: 20px;
+		right: 0;
+		display: flex;
+		align-items: center;
+		padding-right: 0px;
+		padding-left: 10px;
+		text-align: right;
+		h2{
+			margin-bottom: 5px;
+		}
+		p{
+			margin-bottom: 0;
+			color: #fff;
+		}
+	}
+	.price{
+		min-width: 110px;
+		height: 105px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-left: 10px;
+		padding: 10px 0;
+		background: #fff;
+		border-radius: 50% 0 0 50%;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 1em;
+		letter-spacing: -0.03em;
+		color: #2D2D2D;
+		span {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 48px;
+			line-height: 1em;
+			letter-spacing: -0.03em;
+			color: var(--main_color);
+
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+	@include breakpoint(extra-small) {
+		.price {
+			min-width: 60px;
+			height: 60px;
+
+			span {
+				font-size: 26px;
+			}
+		}
+	}
+}
+.tile-price-grid {
+	display: flex;
+	flex-wrap: wrap;
+	.gallery-grid__item {
+		position: relative;
+		width: 33.333%;
+		padding: 0;
+		margin: 0;
+	}
+	@include breakpoint(small) {
+		.gallery-grid__item {
+			width: 50%;
+		}
+	}
+	@include breakpoint(extra-small) {
+		.gallery-grid__item {
+			width: 50%;
+		}
+	}
+	@media (max-width: 633px){
+		.gallery-grid__item {
+			width: 100%;
+		}
+	}
+	@media (max-width: 1124px){
+		h2{
+			font-size: 30px;
+		}
+		.tile-price-card{
+			.price{
+				min-width: 87px;
+				height: 87px;
+			}
+			span{
+				font-size: 30px;
+			}
+		}
+	}
+}
+/*===> End tile-price-wrap <===*/

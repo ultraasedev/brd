@@ -1,0 +1,51 @@
+/*===> Begin slick-dots <===*/
+.slick-dots {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	padding: 0 15px;
+
+	li {
+		padding-left: 0;
+		margin-bottom: 0;
+		margin-right: 20px;
+
+		&::after {
+			display: none;
+		}
+
+		&.slick-active {
+			button {
+				background: var(--main_color);
+			}
+		}
+
+		button {
+			display: block;
+			width: 6px;
+			height: 6px;
+			padding: 0;
+			border: none;
+			border-radius: 50%;
+			background: var(--slick_dots_bg);
+			font-size: 0;
+			line-height: 0;
+			transition: all .3s;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		margin-top: 30px;
+	}
+}
+
+.inner-dots {
+	.slick-dots {
+		position: absolute;
+		bottom: 40px;
+	}
+}
+/*===> End slick-dots <===*/

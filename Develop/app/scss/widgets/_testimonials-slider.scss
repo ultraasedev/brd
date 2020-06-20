@@ -1,0 +1,137 @@
+/*===> Begin testimonials-slider <===*/
+.testimonials-slider {
+	position: static;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.slick-next,
+	.slick-prev {
+		top: auto;
+		bottom: 80px;
+	}
+
+	.slick-next {
+		right: auto;
+		left: 50%;
+	}
+
+	.slick-prev {
+		left: auto;
+		right: 50%;
+	}
+
+	.tt-slide {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.text-block {
+		position: relative;
+		z-index: 10;
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			font-size: 19px;
+		}
+	}
+
+	@include breakpoint(small) {
+		.text-block {
+			h2 {
+				margin-bottom: 25px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.text-block {
+			h2 {
+				margin-bottom: 20px;
+			}
+
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+.testimonial-section {
+	position: relative;
+
+	.quote-img {
+		position: absolute;
+		left: 133px;
+		top: 100px;
+		width: 168px;
+		opacity: .05;
+	}
+
+	.testimonial-svg {
+		width: 100%;
+		max-width: 506px;
+	}
+
+	.container {
+		position: static !important;
+
+		.row {
+			position: static !important;
+
+			>div{
+				position: static !important;
+			}
+		}
+	}
+
+	@include breakpoint(leptop) {
+		.quote-img {
+			left: 90px;
+			top: 90px;
+		}
+	}
+
+	@include breakpoint(medium) {
+		.quote-img {
+			left: 80px;
+			top: 80px;
+			width: 150px;
+		}
+	}
+
+	@include breakpoint(small) {
+		.quote-img {
+			left: 40px;
+			top: 80px;
+			width: 110px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.quote-img {
+			left: 20px;
+			top: 80px;
+			width: 90px;
+		}
+	}
+
+	@media (max-width: 575px)  {
+		.quote-img {
+			left: 20px;
+			top: 20px;
+			width: 90px;
+		}
+
+		.testimonial-svg {
+			display: none;
+		}
+	}
+}
+/*===> End testimonials-slider <===*/

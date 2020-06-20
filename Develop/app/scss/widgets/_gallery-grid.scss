@@ -1,0 +1,110 @@
+/*===> Begin gallery-grid <===*/
+.gallery-grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	.gallery-grid__item {
+		position: relative;
+		width: 20%;
+
+		&:hover {
+			.grid-item-content {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.insta-icn {
+				opacity: 0;
+			}
+		}
+
+		.start-video-wrap {
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			
+		}
+
+		.insta-icn {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 10px;
+			background: rgba(var(--main_dark_rgb), .9);
+			transition: all .4s;
+		}
+	}
+
+	.grid-item-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 20;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding: 15px;
+		background: rgba(#27262B,.9);
+		text-align: center;
+		transition: all .4s;
+		visibility: hidden;
+		opacity: 0;
+
+		.grid-item-ico {
+			margin-bottom: 10px;
+		}
+
+		.grid-item-title {
+			margin-bottom: 10px;
+			font-family: var(--header_font);
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 1em;
+			letter-spacing: -0.03em;
+			color: #fff;
+		}
+
+		.grid-post-info {
+			font-weight: 700;
+			font-size: 13px;
+			color: #fff;
+
+			span {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		.grid-item-content {
+			.grid-item-title {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.gallery-grid__item {
+			width: 33.33%;
+		}
+
+		.grid-item-content {
+			.grid-item-title {
+				font-size: 12px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.gallery-grid__item {
+			width: 50%;
+		}
+	}
+}
+/*===> End gallery-grid <===*/

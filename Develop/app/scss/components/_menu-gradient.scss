@@ -1,0 +1,14 @@
+/*===> Begin menu-gradient <===*/
+.menu-gradient {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	height: 4px;
+	border-radius: 4px;
+	transition: all .3s; 
+	transition-timing-function: cubic-bezier(0.250, 0.250, 0.285, 1.300);
+	@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+}
+/*===> End menu-gradient <===*/

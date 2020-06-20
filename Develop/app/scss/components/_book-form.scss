@@ -1,0 +1,74 @@
+/*===> Begin book-form <===*/
+.book-form {
+
+	.tt-form-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.tt-form-control_30 {
+		display: block;
+		width: 30%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_33 {
+		display: block;
+		width: 33.33%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_40 {
+		display: block;
+		width: 40%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_50 {
+		display: block;
+		width: 50%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_60 {
+		display: block;
+		width: 60%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_66 {
+		display: block;
+		width: 66.66%;
+		padding: 0 10px;
+	}
+
+	.tt-form-control_70 {
+		display: block;
+		width: 70%;
+		padding: 0 10px;
+	}
+
+	button {
+		display: block;
+		margin-top: 20px;
+		min-width: 236px;
+		width: 236px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include breakpoint(small) {
+		.tt-form-control_30,
+		.tt-form-control_33,
+		.tt-form-control_40,
+		.tt-form-control_50,
+		.tt-form-control_60,
+		.tt-form-control_66,
+		.tt-form-control_70 {
+			width: 100%;
+		}
+	}
+}
+/*===> End book-form <===*/

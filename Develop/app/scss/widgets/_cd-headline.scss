@@ -1,0 +1,157 @@
+/*===> Begin cd-headline  <===*/
+.cd-headline {
+	width: 100%;
+	max-width: 430px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 45px;
+	background: rgba(var(--main_dark_rgb), .9);
+
+	.cd-words-wrapper {
+		position: relative;
+		display: block;
+		margin-bottom: 0;
+		height: 96px;
+
+		li {
+			margin-bottom: 0;
+			padding: 0;
+
+			&::after {
+				display: none;
+			}
+
+			em {
+				background: -webkit-linear-gradient(45deg, var(--main_color_2) 30%, var(--main_color) 100%);
+				font-size: 36px;
+				font-family: var(--header_font);
+				font-weight: bold;
+				line-height: 1.3em;
+				letter-spacing: -0.03em;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-align: center;
+				text-transform: uppercase;
+				color: var(--main_color);
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 35px;
+		.cd-words-wrapper {
+			height: 50px;
+			li {
+				em {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		margin-bottom: 25px;
+		.cd-words-wrapper {
+			li {
+				em {
+					font-size: 28px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.cd-words-wrapper {
+			li {
+				em {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}
+
+.clients-list {
+	margin-bottom: 0;
+
+	li {
+		margin-bottom: 0;
+		padding-left: 0;
+		font-size: 18px;
+		line-height: 37px;
+		text-align: center;
+		color: var(--text_gray);
+
+		&::after {
+			display: none;
+		}
+	}
+
+	@include breakpoint(small) {
+		li {
+			font-size: 16px;
+		}
+	}
+}
+
+.cd-headline i,
+.cd-headline em {
+  font-style: normal;
+}
+.cd-words-wrapper li {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.cd-words-wrapper li.is-visible {
+  position: absolute;
+}
+.cd-headline .cd-words-wrapper {
+  -webkit-perspective: 300px;
+          perspective: 300px;
+}
+.cd-headline i,
+.cd-headline em {
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.cd-headline i {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-20px) rotateX(90deg);
+          transform: translateZ(-20px) rotateX(90deg);
+  opacity: 0;
+}
+.is-visible .cd-headline i {
+  opacity: 1;
+}
+.cd-headline i.in {
+  -webkit-animation: cd-rotate-2-in 0.4s forwards;
+          animation: cd-rotate-2-in 0.4s forwards;
+}
+.cd-headline i.out {
+  -webkit-animation: cd-rotate-2-out 0.4s forwards;
+          animation: cd-rotate-2-out 0.4s forwards;
+}
+.cd-headline em {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+.no-csstransitions .cd-headline i {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  opacity: 0;
+}
+.no-csstransitions .cd-headline i em {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.no-csstransitions .cd-headline .is-visible i {
+  opacity: 1;
+}
+/*===> End cd-headline  <===*/

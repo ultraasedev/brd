@@ -1,0 +1,29 @@
+/*===> Begin search-form <===*/
+.search-form,
+.newsletter-form {
+	position: relative;
+	
+	input {
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+
+	button {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		border: none;
+		background-color: transparent;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+.newsletter-form {
+	width: 100%;
+	max-width: 370px;
+}
+/*===> End search-form <===*/

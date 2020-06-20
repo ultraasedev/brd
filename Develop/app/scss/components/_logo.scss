@@ -1,0 +1,33 @@
+/*===> Begin logo <===*/
+.logo {
+	display: flex;
+	align-items: center;
+
+	img {
+		margin-right: 10px;
+	}
+
+	.logo-text {
+		font-family: var(--header_font);
+		span {
+			display: block;
+			color: #fff;
+
+			&:first-child {
+				font-size: 42px;
+				font-weight: 800;
+				line-height: 42px;
+				letter-spacing: -0.03em;
+			}
+
+			&:last-child {
+				padding-left: 5px;
+				font-size: 10px;
+				font-weight: bold;
+				letter-spacing: 0.25em;
+				line-height: 15px;
+			}
+		}
+	}
+}
+/*===> End logo <===*/

@@ -1,0 +1,7 @@
+@mixin linear-gradient($direction, $color-start, $color-stop) {
+	background: $color-start; /* Old browsers */
+	background: -moz-linear-gradient($direction,  $color-start 0%, $color-stop 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient($direction,  $color-start 0%,$color-stop 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient($direction,  $color-start 0%,$color-stop 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-start', endColorstr='$color-stop',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

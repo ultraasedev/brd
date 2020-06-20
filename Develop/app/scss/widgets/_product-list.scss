@@ -1,0 +1,39 @@
+/*===> Begin product-list <===*/
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: -30px;
+	.product-list__item {
+		width: 33.33%;
+		margin-bottom: 30px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@include breakpoint(medium) {
+		.product-list__item {
+			width: 50%;
+		}
+	}
+
+	@include breakpoint(small) {
+		.product-list__item {
+			width: 33.33%;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.product-list__item {
+			width: 50%;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.product-list__item {
+			width: 100%;
+		}
+	}
+}
+/*===> End product-list <===*/

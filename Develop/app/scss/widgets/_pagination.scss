@@ -1,0 +1,65 @@
+/*===> Begin tt-pagination <===*/
+.tt-pagination {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin-top: 45px;
+
+	&.pagination_white {
+		li {
+			a, p {
+				color: #fff;
+			}
+		}
+	}
+
+	&.pagination_short {
+		li {
+			margin-right: 20px;
+		}
+	}
+
+	li {
+		margin-bottom: 0;
+		margin-right: 40px;
+		padding-left: 0;
+
+		&::after {
+			display: none;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a, p {
+			font-family: var(--header_font);
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 1em;
+			color: var(--header_color);
+		}
+
+		p {
+			opacity: .3;
+		}
+
+		a {
+			&.active, &:hover {
+				color: var(--main_color);
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		margin-top: 30px;
+
+		li {
+			margin-right: 20px;
+		}
+	}
+}
+/*===> End tt-pagination <===*/

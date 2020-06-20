@@ -1,0 +1,59 @@
+/*===> Begin team-card <===*/
+.team-card {
+	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.engineer-card {
+		margin-bottom: 0;
+	}
+
+	.desription {
+		position: relative;
+		padding: 40px 30px 36px;
+		background: var(--main_gray);
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			@include linear-gradient(45deg, var(--main_color), var(--main_color_2));
+		}
+
+		p {
+			margin-bottom: 0;
+			color: var(--text_gray);
+		}
+	}
+
+	@include breakpoint(small) {
+		.desription {
+			padding: 35px 25px 31px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.desription {
+			padding: 30px 20px 26px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.desription {
+			padding: 25px 15px 21px;
+		}
+	}
+}
+
+.team-slider {
+	margin-left: -15px;
+	margin-right: -15px;
+	.tt-slide {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+/*===> End team-card <===*/

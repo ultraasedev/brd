@@ -1,0 +1,38 @@
+/*===> Begin icon-block <===*/
+.icon-block {
+	.custom-icon {
+		margin-bottom: 23px;
+	}
+
+	h4 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	ul {
+		margin-bottom: 0;
+	}
+
+	li {
+		margin-bottom: 0;
+	}
+
+	@include breakpoint(small) {
+		h4, .h4 {
+			text-align: center;
+		}
+
+		ul {
+			text-align: left;
+		}
+
+		.custom-icon {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+/*===> End icon-block <===*/

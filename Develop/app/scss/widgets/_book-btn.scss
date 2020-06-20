@@ -1,0 +1,101 @@
+/*===> Begin book-btn <===*/
+.book-btn {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 20px 15px;
+	border: 2px solid var(--header_color);
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		h4 {
+			color: #fff;
+
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+
+		p {
+			color: #fff;
+
+			span{
+				color: #fff;
+			}
+		}
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		transition: all .3s;
+		opacity: 0;
+		@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+	}
+
+	h4 {
+		position: relative;
+		z-index: 1;
+		transition: all .3s;
+
+		svg {
+			margin-right: 7px;
+			path {
+				fill: var(--header_color);
+				transition: all .3s;
+			}
+		}
+	}
+
+	p {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 0;
+		font-size: 17px;
+		color: var(--text_color);
+		transition: all .3s;
+
+		span {
+			font-size: 22px;
+			font-weight: bold;
+			color: var(--main_color);
+			transition: all .3s;
+		}
+	}
+
+	@include breakpoint(medium) {
+		h4 {
+			font-size: 18px;
+		}
+
+		p {
+			font-size: 16px;
+
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		p {
+			font-size: 15px;
+
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+}
+/*===> End book-btn <===*/

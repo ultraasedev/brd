@@ -1,0 +1,16 @@
+/*===> Begin home-page layout <===*/
+.home-page {
+	.header-wrap {
+		background-color: transparent;
+		transition: background-color .3s;
+
+		&.is-scroll {
+			background-color: var(--main_dark);
+		}
+	}
+
+	.clone-nav {
+		display: none !important;
+	}
+}
+/*===> End home-page layout <===*/

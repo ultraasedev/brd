@@ -1,0 +1,91 @@
+/*===> Begin slick-arrow <===*/
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	transform: translateY(-50%);
+	border: none;
+	background-color: transparent;
+	cursor: pointer !important;
+
+	&:hover {
+		svg {
+			path {
+				fill: var(--main_color);
+			}
+		}
+	}
+
+	&.slick-prev {
+		left: 50px;
+	}
+
+	&.slick-next {
+		right: 50px;
+	}
+
+	svg {
+		path {
+			fill: var(--slick_arrow_color);
+			transition: all .3s;
+		}
+	}
+}
+
+.arrow-outside {
+	.slick-arrow {
+		&.slick-prev {
+			left: 0px;
+			transform: translateX(-100px);
+		}
+
+		&.slick-next {
+			right: 0px;
+			transform: translateX(100px);
+		}
+	}
+
+	@include breakpoint(leptop) {
+		.slick-arrow {
+			&.slick-prev {
+				transform: translateX(-50%);
+			}
+
+			&.slick-next {
+				transform: translateX(50%);
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		.slick-arrow {
+			&.slick-prev {
+				transform: translateX(0);
+			}
+
+			&.slick-next {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.white-arrow {
+	.slick-arrow {
+
+		&:hover {
+			svg {
+				path {
+					fill: var(--main_color);
+				}
+			}
+		}
+
+		svg {
+			path {
+				fill: #fff;
+			}
+		}
+	}
+}
+/*===> End slick-arrow <===*/

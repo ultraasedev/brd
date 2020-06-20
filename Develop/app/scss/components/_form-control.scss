@@ -1,0 +1,24 @@
+/*===> Begin  form-control <===*/
+.form-control {
+	height: auto;
+	margin-bottom: 10px;
+	padding: 12px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	font-size: 16px;
+	line-height: 1em;
+	color: var(--text_color);
+
+	&:focus {
+		border-color: var(--main_color);
+		box-shadow: none;
+	}
+}
+
+label {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--header_color);
+}
+/*===> End form-control <===*/

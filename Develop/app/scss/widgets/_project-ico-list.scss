@@ -1,0 +1,15 @@
+/*===> Begin project-ico-list <===*/
+.project-ico-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: -10px;
+
+	.project-ico__item {
+		width: 20%;
+		margin-bottom: 10px;
+		padding: 0 5px;
+	}
+}
+/*===> End project-ico-list <===*/

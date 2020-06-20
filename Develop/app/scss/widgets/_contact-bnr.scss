@@ -1,0 +1,37 @@
+/*===> Begin contact-bnr <===*/
+.contact-bnr {
+	background-size: cover;
+	background-position: center;
+	padding: 100px 0;
+
+	h2, .h2 {
+		margin-bottom: 40px;
+		text-align: center;
+		color: #fff;
+	}
+
+	.contact-list {
+		margin-bottom: -50px;
+	}
+
+	@include breakpoint(small) {
+		padding: 70px 0;
+
+		h2, .h2 {
+			margin-bottom: 30px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		padding: 50px 0;
+	}
+}
+
+.contact-text {
+	max-width: 520px;
+
+	ul {
+		margin-bottom: 30px;
+	}
+}
+/*===> End contact-bnr <===*/

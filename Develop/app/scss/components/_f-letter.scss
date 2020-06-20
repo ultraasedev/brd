@@ -1,0 +1,39 @@
+/*===> Begin first-letter <===*/
+.f-letter {
+	display: flex;
+
+	&.float {
+		display: block;
+
+		.f-letter-wrap {
+			float: left;
+		}
+	}
+
+	.f-letter-wrap {
+		margin-right: 10px;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 72px;
+		line-height: 66px;
+		background: -webkit-linear-gradient(45deg, var(--main_color_2) 30%, var(--main_color) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: var(--main_color); 
+	}
+
+	@include breakpoint(extra-small) {
+		.f-letter-wrap {
+			font-size: 60px;
+			line-height: 60px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.f-letter-wrap {
+			font-size: 46px;
+			line-height: 46px;
+		}
+	}
+}
+/*===> End first-letter <===*/

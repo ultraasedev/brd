@@ -1,0 +1,49 @@
+/*===> Begin section-header <===*/
+.section-header {
+	max-width: 575px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 50px;
+
+	&.white {
+		h2 {
+			color: #fff;
+		}
+
+		p {
+			color: var(--text_gray);
+		}
+	}
+
+	h2 {
+		margin-bottom: 15px;
+		text-transform: capitalize;
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: 19px;
+		color: var(--header_color_2);
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 40px;
+
+		p {
+			font-size: 16px;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		margin-bottom: 30px;
+
+		p {
+			font-size: 15px;
+		}
+		.fw-700{
+			font-weight: 400 !important;
+		}
+	}
+}
+/*===> End section-header <===*/

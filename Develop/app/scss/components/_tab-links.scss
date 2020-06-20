@@ -1,0 +1,91 @@
+/*===> Begin tab-links <===*/
+.tab-links {
+	display: flex;
+	justify-content: center;
+	padding: 0 15px;
+	margin-bottom: 50px;
+	
+	.tab-links__item {
+		position: relative;
+		margin-right: 130px;
+		padding-bottom: 22px;
+		font-weight: bold;
+		font-size: 19px;
+		line-height: 1em;
+		text-align: center;
+		color: var(--header_color);
+		cursor: pointer;
+		transition: all .3s;
+
+		&:hover {
+			color: var(--main_color);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: calc(100% + 10px);
+			width: 110px;
+			height: 1px;
+			background: var(--header_color);
+			opacity: .2;
+			transform: translateY(-11px);
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&.active {
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				border-radius: 4px;
+				@include linear-gradient(-45deg, var(--main_color), var(--main_color_2));
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		margin-bottom: 30px;
+
+		.tab-links__item {
+			margin-right: 80px;
+			font-size: 17px;
+
+			&::after {
+				width: 60px;
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.tab-links__item {
+			margin-right: 50px;
+
+			&::after {
+				width: 30px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.tab-links__item {
+			margin-right: 30px;
+
+			&::after {
+				width: 10px;
+			}
+		}
+	}
+}
+/*===> End tab-links <===*/

@@ -1,0 +1,60 @@
+/*===> Begin input <===*/
+input {
+	display: block;
+	width: 100%;
+	min-width: 0;
+	margin-bottom: 10px;
+	padding: 11px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 1em;
+	color: var(--text_color);
+	transition: all .3s;
+
+	&:focus {
+		border-color: var(--main_color);
+	}
+}
+
+.date-input {
+	position: relative;
+	display: block;
+
+	input {
+		padding-right: 40px;
+	}
+
+	.input-ico {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		color: var(--main_color);
+
+		path {
+			fill: var(--main_color);
+		}
+	}
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	min-width: 0;
+	min-height: 190px;
+	margin-bottom: 10px;
+	padding: 11px 15px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 1em;
+	color: var(--text_color);
+	transition: all .3s;
+	resize: none;
+
+	&:focus {
+		border-color: var(--main_color);
+	}
+}
+/*===> End input <===*/

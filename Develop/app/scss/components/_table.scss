@@ -1,0 +1,107 @@
+/*===> Begin table <===*/
+table {
+	width: 100%;
+	margin-bottom: 30px;
+
+	thead,
+	tbody,
+	tfoot {
+		width: 100%;
+
+		td {
+			padding: 15px 40px;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	tbody {
+		td {
+			font-size: 17px;
+			color: var(--header_color);
+
+			&:first-child {
+				font-size: 19px;
+				font-weight: bold;
+				color: var(--header_color);
+
+				* {
+					font-size: 19px;
+					font-weight: bold;
+					color: var(--header_color);
+				}
+			}
+
+			* {
+				font-size: 17px;
+				color: var(--header_color);
+			}
+		}
+	}
+
+	tfoot {
+		td {
+			* {
+				font-size: 19px;
+				font-weight: bold;
+				color: var(--header_color);
+			}
+		}
+	}
+
+	thead {
+		background: var(--main_gray);
+		border: 1px solid var(--main_gray);
+		border-bottom: none;
+
+		* {
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		        
+	}
+
+	tbody {
+		td {
+			border-bottom: 1px solid  rgba(68, 37, 37, 0.15);
+
+			&:first-child {
+				border-left: 1px solid  rgba(68, 37, 37, 0.15);
+			}
+
+			&:last-child {
+				border-right: 1px solid  rgba(68, 37, 37, 0.15);
+			}
+		}
+	}
+
+	tfoot {
+		background: var(--table_light_gray);
+		td {
+			border-bottom: 1px solid  rgba(68, 37, 37, 0.15);
+
+			&:first-child {
+				border-left: 1px solid  rgba(68, 37, 37, 0.15);
+			}
+
+			&:last-child {
+				border-right: 1px solid  rgba(68, 37, 37, 0.15);
+			}
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		thead,
+		tbody,
+		tfoot {
+			td {
+				padding: 10px 20px;
+			}
+		}
+	}
+}
+/*===> End table <===*/

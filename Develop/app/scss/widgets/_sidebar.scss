@@ -1,0 +1,42 @@
+/*===> Begin sidebar <===*/
+.sidebar {
+	position: relative;
+	&.dark {
+		padding: 34px 25px 30px 20px;
+		background: var(--main_gray);
+		box-shadow: 0px 5px 20px rgba(var(--main_gray_rgb), 0.1);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			@include linear-gradient(45deg, var(--main_color), var(--main_color_2));
+		}
+
+		h4 {
+			color: #fff;
+		}
+
+		a, p {
+			color: var(--text_gray);
+		}
+
+		a {
+			&:hover {
+				color: var(--main_color);
+			}
+		}
+	}
+
+	.sidebar-block {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+/*===> End sidebar <===*/

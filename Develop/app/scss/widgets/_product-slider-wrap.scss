@@ -1,0 +1,29 @@
+/*===> Begin product-slider-wrap <===*/
+.product-slider-wrap {
+	max-width: 540px;
+	.product-slider {
+		margin-bottom: 20px;
+	}
+
+	.product-slider-nav {
+		margin-left: -7px;
+		margin-right: -7px;
+
+		.tt-slide {
+			width: 20%;
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	@include breakpoint(small) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+/*===> End product-slider-wrap <===*/

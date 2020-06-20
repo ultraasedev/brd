@@ -1,0 +1,53 @@
+/*===> Begin recent-post <===*/
+.recent-post {
+	display: flex;
+	align-items: flex-start;
+
+	.recent-post-image {
+		display: block;
+		margin-right: 20px;
+		min-width: 80px;
+		overflow: hidden;
+
+		&:hover {
+			img {
+				transform: scale(1.11) rotate(7deg);
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			transition: all .3s;
+		}
+	}
+
+	time {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 15px;
+		line-height: 1em;
+		color: var(--text_color);
+	}
+
+	.recent-post-desc {
+		a {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.recent-posts-list {
+	.recent-post {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid rgba(var(--header_color_rgb), .1);
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+}
+/*===> End recent-post <===*/

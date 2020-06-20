@@ -1,0 +1,51 @@
+/*===> Begin form-popup <===*/
+.form-popup {
+	position: relative;
+	max-width: 980px;
+	width: 100%;
+	margin: 20px auto;
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 40px;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		transform: translateY(-100%);
+		@include linear-gradient(45deg, var(--main_color), var(--main_color_2));
+	}
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	.close {
+		position: relative;
+		transform: translate(100%, -50%);
+	}
+
+	@include breakpoint(small) {
+		.close {
+			transform: translate(-10%, -50%);
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+	}
+
+	@include breakpoint(mobile) {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+	}
+}
+/*===> End form-popup <===*/
