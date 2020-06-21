@@ -55,7 +55,6 @@
    
 		<!-- Brgin header -->
 		<div class="header-wrap">
-		
 			<header>
 				<a href="index.php" class="logo">
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" class="lazy" data-src="img/logo.svg" alt="logo">
@@ -89,6 +88,8 @@
 										<a href="artiste.php">Nos Artistes</a>
 										<a href="playlist.php">Nos Playlist</a>
 										<a href="mddpresta.php">Presations</a>
+										<a href="publishing.php">Publishing</a>
+										<a href="booking.php">Booking</a>
 										<a href="apropos.php">A Propos</a>
 									</li>
 								</ul>
