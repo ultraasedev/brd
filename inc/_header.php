@@ -68,7 +68,7 @@
 						<ul class="menu">
 
 							<li class="active"><a href="index.php">Acceuil</a></li>
-							<li><a href="https://www.braizeradio.fr">BRAIZERADIO&nbsp;<i class="fal fa-radio"></i></a></li>
+							<li><a href="https://www.old-up.fr">Old-Up&nbsp;Radio&nbsp;<i class="fal fa-radio"></i></a></li>
 							<li>
 								<a href="#">LE STUDIO</a>
 								<ul class="sub-menu">
