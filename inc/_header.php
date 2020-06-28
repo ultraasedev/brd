@@ -45,6 +45,10 @@
 	  	<link href="vendor/fancybox/dist/jquery.fancybox.min.css" type="text/css" rel="stylesheet" />
 		<!--====>> Index CSS <<====-->
         <link href="css/index.css" type="text/css" rel="stylesheet" />
+
+        <!--====>> Vues 360 <<====-->
+		<script src="https://cdn.rawgit.com/leemark/embed360/20dac87eea4d7fc0f8a368519fc6c3b3a208f492/embed360.js"></script>
+
         
 
 
@@ -60,7 +64,7 @@
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" class="lazy" data-src="img/logo.svg" alt="logo">
 					<span class="logo-text">
 						<span>BRAIZE</span>
-						<span style="text-align:center;">RECORDS</span>
+						<span style="text-align:center;color:#B72929;font-weight:bold;font-size:12px">RECORDS</span>
 					</span>
 				</a>
 				<div class="header-right">
@@ -87,7 +91,6 @@
 									<li>
 										<a href="artiste.php">Nos Artistes</a>
 										<a href="playlist.php">Nos Playlist</a>
-										<a href="mddpresta.php">Presations</a>
 										<a href="publishing.php">Publishing</a>
 										<a href="booking.php">Booking</a>
 										<a href="apropos.php">A Propos</a>
