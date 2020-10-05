@@ -96,7 +96,7 @@
 						<div class="footer-bottom text-center">
 							<p class="mb-0">&copy;  2020 BraizeRecords. Tous droits réservés.</p>
 							<div class="footer-bottom_link text-center">
-								<a href="pdd.php">Protection des données </a> | <a href="mentionslegales.php">Mentions Légales</a>
+							<a href="apropos.php">A Propos </a> |<a href="pdd.php">Protection des données </a> | <a href="jobs.php">Carriere </a> | <a href="mentionslegales.php">Mentions Légales</a>
 							</div>
 						</div>
 					</div>

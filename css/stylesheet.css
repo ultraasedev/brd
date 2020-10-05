@@ -1,6 +1,18 @@
-/*
-	Rtl
-*/
+.socialslinks{
+  color:#74b9ff;
+  display:inline-block;
+  font-size:25px;
+  margin-left:10px;
+  word-spacing:5px;
+}
+.socialslinks:hover{
+  color:#B72929;
+  display:inline-block;
+  font-size:30px;
+  margin-left:10px;
+  margin-top:10px;
+  word-spacing:5px;
+}
 /*
 	Typography
 */
